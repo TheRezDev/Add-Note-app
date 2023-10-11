@@ -3,6 +3,7 @@ import { useState } from "react";
 import AddNewNote from "./component/AddNewNote";
 import NoteList from "./component/NoteList";
 import Header from "./component/Header";
+import NoteStatus from "./component/NoteStatus";
 
 function App() {
   
@@ -42,6 +43,7 @@ function App() {
       <div className="note-app">
         <AddNewNote onAddNote={handleAddNote } />
         <div className="note-container">
+          <NoteStatus notes={notes} />
           <NoteList
             notes={notes}
             onDelete={handelDeleteNote}
